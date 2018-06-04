@@ -57,7 +57,7 @@ for key in keys:
                     text = text + 'Match ' + data[itog]['p'] + ' ' + 'cat ' + str(data[itog]['c'] - 13) + ' '
     if text != '':
         try:
-            result = urlopen('https://api.telegram.org/bot581859351:AAGREOwK7sV33iHLTvfpbwiDXDoIefmdGWY/sendMessage?chat_id=' + str(key) + '&text=' + text)
+            result = urlopen('https://api.telegram.org/bot/sendMessage?chat_id=' + str(key) + '&text=' + text)
             tickets = True
         except:
             print(str(datetime.datetime.now()) + ' билеты есть, но чет не работает')
